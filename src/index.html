@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./scss/main.scss" />
+    <link rel="shortcut icon" type="image/png" href="../favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/88eeb91d4d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Trivia App</title>
+  </head>
+  <body>
+    <main id="main">
+      <div class="container">
+        <!-- Home Page -->
+        <section id="section-a">
+          <div class="home-page">
+            <h1 class="heading">Trivia!</h1>
+            <h1 class="section-heading">Choose a Category:</h1>
+            <div class="category">
+              <button class="btn setting category">Arts and Literature</button>
+              <button class="btn setting category">Film and TV</button>
+              <button class="btn setting category">Food and Drink</button>
+              <button class="btn setting category">General Knowledge</button>
+              <button class="btn setting category">Geography</button>
+              <button class="btn setting category">History</button>
+              <button class="btn setting category">Music</button>
+              <button class="btn setting category">Science</button>
+              <button class="btn setting category">Society and Culture</button>
+              <button class="btn setting category">Sport and Leisure</button>
+            </div>
+            <h1 class="section-heading">Choose Difficulty:</h1>
+            <div class="difficulty">
+              <button class="btn setting difficulty">Easy</button>
+              <button class="btn setting difficulty">Medium</button>
+              <button class="btn setting difficulty">Hard</button>
+            </div>
+            <div class="go-button">
+              <a class="btn-go" href="#section-b">Go!</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Question 1 -->
+        <section id="section-b" class="question-container">
+          <div class="section-title">
+            <h1 class="section-heading">Question 1/5</h1>
+            <h2 class="question-one question"></h2>
+          </div>
+          <div class="options">
+            <button class="btn btn-option q1-1 options-1"></button>
+            <button class="btn btn-option q1-2 options-1"></button>
+            <button class="btn btn-option q1-3 options-1"></button>
+            <button class="btn btn-option q1-4 options-1"></button>
+          </div>
+          <div class="next-button">
+            <a class="next-page next-1" href="#section-c">Next</a>
+          </div>
+        </section>
+
+        <!-- Question 2 -->
+        <section id="section-c" class="question-container">
+          <div class="section-title">
+            <h1 class="section-heading">Question 2/5</h1>
+            <h2 class="question-two question">Question?</h2>
+          </div>
+          <div class="options">
+            <button class="btn btn-option q2-1 options-2"></button>
+            <button class="btn btn-option q2-2 options-2"></button>
+            <button class="btn btn-option q2-3 options-2"></button>
+            <button class="btn btn-option q2-1 options-2"></button>
+          </div>
+          <div class="next-button">
+            <a class="next-page next-2" href="#section-d">Next</a>
+          </div>
+        </section>
+
+        <!-- Question 3 -->
+        <section id="section-d" class="question-container">
+          <div class="section-title">
+            <h1 class="section-heading">Question 3/5</h1>
+            <h2 class="question-three question">Question?</h2>
+          </div>
+          <div class="options">
+            <button class="btn btn-option q3-1 options-3"></button>
+            <button class="btn btn-option q3-2 options-3"></button>
+            <button class="btn btn-option q3-3 options-3"></button>
+            <button class="btn btn-option q3-4 options-3"></button>
+          </div>
+          <div class="next-button">
+            <a class="next-page next-3" href="#section-e">Next</a>
+          </div>
+        </section>
+
+        <!-- Question 4 -->
+        <section id="section-e" class="question-container">
+          <div class="section-title">
+            <h1 class="section-heading">Question 4/5</h1>
+            <h2 class="question-four question">Question?</h2>
+          </div>
+          <div class="options">
+            <button class="btn btn-option q4-1 options-4"></button>
+            <button class="btn btn-option q4-2 options-4"></button>
+            <button class="btn btn-option q4-3 options-4"></button>
+            <button class="btn btn-option q4-4 options-4"></button>
+          </div>
+          <div class="next-button">
+            <a class="next-page next-4" href="#section-f">Next</a>
+          </div>
+        </section>
+
+        <!-- Question 5 -->
+        <section id="section-f" class="question-container">
+          <div class="section-title">
+            <h1 class="section-heading">Question 5/5</h1>
+            <h2 class="question-five question">Question?</h2>
+          </div>
+          <div class="options">
+            <button class="btn btn-option q5-1 options-5"></button>
+            <button class="btn btn-option q5-2 options-5"></button>
+            <button class="btn btn-option q5-3 options-5"></button>
+            <button class="btn btn-option q5-4 options-5"></button>
+          </div>
+          <div class="view-score">
+            <a class="next-page next-5" href="#section-g">View Score</a>
+          </div>
+        </section>
+
+        <!-- Exit Page -->
+        <section id="section-g">
+          <div class="exit-page">
+            <h1 class="section-heading">
+              You got <span class="score">0</span>/5 questions correct
+              <span class="emoji"></span>
+            </h1>
+            <div class="exit-buttons">
+              <a class="try-again" href="#section-b">Try Again</a>
+              <a class="other-categories" href="#section-a">Other Categories</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

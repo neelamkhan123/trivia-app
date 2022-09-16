@@ -1,0 +1,119 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Cabin", sans-serif;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.section-heading {
+  font-size: 4rem;
+}
+
+.btn {
+  height: 50px;
+  width: 160px;
+  font-size: 1rem;
+  background-color: #fff;
+  font-family: "Cabin", sans-serif;
+  cursor: pointer;
+  margin: 0.4rem;
+}
+.btn:hover {
+  scale: 1.1;
+}
+
+.btn-toggle {
+  background-color: black;
+  color: #fff;
+}
+
+.next-page {
+  display: none;
+}
+
+#main .container {
+  margin: 0 3rem;
+}
+#main .container #section-a {
+  height: 100vh;
+}
+#main .container #section-a .home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#main .container #section-a .home-page .heading {
+  font-size: 5rem;
+}
+#main .container #section-a .home-page .difficulty {
+  margin-bottom: 1rem;
+}
+#main .container #section-a .home-page .go-button .btn-go {
+  color: green;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#main .container #section-a .home-page .go-button .btn-go:hover {
+  font-size: 2.3rem;
+}
+#main .container .question-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#main .container .question-container .section-title .question {
+  font-size: 2rem;
+  width: 1300px;
+}
+#main .container .question-container .options {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+#main .container .question-container .options .btn-option {
+  width: 300px;
+  height: 250px;
+}
+#main .container .question-container .next-button {
+  text-align: center;
+}
+#main .container .question-container .next-button .next-page {
+  font-size: 2rem;
+}
+#main .container .question-container .next-button .next-page:hover {
+  font-size: 2.3rem;
+}
+#main .container .question-container .view-score {
+  text-align: center;
+  font-size: 2rem;
+}
+#main .container .question-container .view-score .next-page {
+  font-size: 2rem;
+}
+#main .container .question-container .view-score .next-page:hover {
+  font-size: 2.3rem;
+}
+#main .container #section-g .exit-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#main .container #section-g .exit-page .exit-buttons {
+  font-size: 2rem;
+}
+#main .container #section-g .exit-page .exit-buttons .try-again {
+  color: red;
+  margin-right: 2rem;
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */
