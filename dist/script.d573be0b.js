@@ -139,25 +139,37 @@ $(function () {
     setTimeout(function () {
       location.reload();
     }, 800);
+  }); // Reset localStorage
+
+  $('.btn-go').click(function () {
+    setTimeout(function () {
+      location.reload();
+    }, 800);
   }); // Select Settings
 
   $('.setting').each(function () {
-    $(this).one('click', function () {
+    $(this).on('click', function () {
+      // Choose Category
       if ($(this).hasClass('category')) {
-        // Choose Category
         var current1 = this.textContent;
-        var category = current1.toLowerCase().split(' ').join('_');
+        var category = current1.toLowerCase().split(' ').join('_'); // Highlight Selected Setting
+
+        $(this).addClass('btn-toggle');
+        $(this).closest('div').find('button').not(this).removeClass('btn-toggle'); // Save to localStorage
+
         localStorage.setItem('cat', category);
 
         var _selectedCat = localStorage.getItem('cat');
-      }
+      } // Choose Difficulty
+
 
       if ($(this).hasClass('difficulty')) {
-        // Reset Quiz
-        location.reload(); // Choose Difficulty
-
         var current2 = this.textContent;
-        var difficulty = current2.toLowerCase();
+        var difficulty = current2.toLowerCase(); // Highlight Selected Setting
+
+        $(this).addClass('btn-toggle');
+        $(this).closest('div').find('button').not(this).removeClass('btn-toggle'); // Save to localStorage
+
         localStorage.setItem('diff', difficulty);
 
         var _selectedDiff = localStorage.getItem('diff');
@@ -213,7 +225,7 @@ $(function () {
 
   function getJSON(category, difficulty) {
     $.get("https://the-trivia-api.com/api/questions?categories=".concat(category, "&limit=5&difficulty=").concat(difficulty), function (data) {
-      console.log(data); // Set Questions and Answers
+      console.log(data[0]); // Set Questions and Answers
       // Question 1
 
       setQuestion(data, 0, $('.question-one'), $('.q1-4'), $('.q1-2'), $('.q1-3'), $('.q1-1'));
@@ -263,7 +275,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53666" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51383" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -33,24 +33,48 @@ $(function () {
     }, 800);
   });
 
+  // Reset localStorage
+  $('.btn-go').click(function () {
+    setTimeout(() => {
+      location.reload();
+    }, 800);
+  });
+
   // Select Settings
   $('.setting').each(function () {
-    $(this).one('click', function () {
+    $(this).on('click', function () {
+      // Choose Category
       if ($(this).hasClass('category')) {
-        // Choose Category
         const current1 = this.textContent;
         const category = current1.toLowerCase().split(' ').join('_');
+
+        // Highlight Selected Setting
+        $(this).addClass('btn-toggle');
+        $(this)
+          .closest('div')
+          .find('button')
+          .not(this)
+          .removeClass('btn-toggle');
+
+        // Save to localStorage
         localStorage.setItem('cat', category);
         const selectedCat = localStorage.getItem('cat');
       }
 
+      // Choose Difficulty
       if ($(this).hasClass('difficulty')) {
-        // Reset Quiz
-        location.reload();
-
-        // Choose Difficulty
         const current2 = this.textContent;
         const difficulty = current2.toLowerCase();
+
+        // Highlight Selected Setting
+        $(this).addClass('btn-toggle');
+        $(this)
+          .closest('div')
+          .find('button')
+          .not(this)
+          .removeClass('btn-toggle');
+
+        // Save to localStorage
         localStorage.setItem('diff', difficulty);
         const selectedDiff = localStorage.getItem('diff');
       }
@@ -114,7 +138,7 @@ $(function () {
     $.get(
       `https://the-trivia-api.com/api/questions?categories=${category}&limit=5&difficulty=${difficulty}`,
       function (data) {
-        console.log(data);
+        console.log(data[0]);
 
         // Set Questions and Answers
         // Question 1
