@@ -135,24 +135,25 @@ a {
     text-align: center;
   }
 }
-@media (max-width: 426px) and (max-height: 1002px) {
+/* iPhoneX */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
   .section-heading {
-    font-size: 3rem;
+    font-size: 1.4rem;
   }
   #main .container {
     margin: 0 0.5rem;
   }
   #main .container #section-a {
-    height: 120vh;
+    height: 110vh;
   }
   #main .container #section-a .home-page .heading {
-    font-size: 4rem;
+    font-size: 3rem;
   }
   #main .container .question-container .section-title .section-heading {
     font-size: 1.4rem;
   }
   #main .container .question-container .section-title .question {
-    width: 400px;
+    width: 360px;
     font-size: 1.2rem;
   }
   #main .container .question-container .options {
@@ -160,8 +161,8 @@ a {
     grid-template-columns: 1fr;
   }
   #main .container .question-container .options .btn-option {
-    height: 150px;
-    width: 400px;
+    height: 120px;
+    width: 345px;
   }
   #main .container #section-g .exit-page .section-heading {
     font-size: 2rem;
